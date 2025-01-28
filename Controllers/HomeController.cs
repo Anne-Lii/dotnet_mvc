@@ -4,15 +4,27 @@ namespace mvc_m1.Controllers;
 
 public class HomeController : Controller {
 
-    public IActionResult Index() {
+    [HttpGet("/")] //Hanterar rotadressen
+    public IActionResult Default()
+    {
+        return RedirectToAction("Index"); // Omdirigera till /home
+    }
+
+    [HttpGet("/home")] //Justerar routing
+    public IActionResult Index() 
+    {
         return View();
     }
 
-    public IActionResult ToDoList() {
+    [HttpGet("/todo")] //Justerar routing
+    public IActionResult ToDoList() 
+    {
         return View();
     }
 
-    public IActionResult About() {
+    [HttpGet("/about")] //Justerar routing
+    public IActionResult About() 
+    {
         return View();
     }
 }
