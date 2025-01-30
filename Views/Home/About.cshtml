@@ -1,1 +1,23 @@
-<h2>Om oss</h2>
+@{
+    ViewData["Title"] = "Om mig";
+}
+<h2>Om mig</h2>
+
+
+<form method="post" action="/setname">
+    <input type="text" name="name" placeholder="Skriv ditt namn">
+    <button type="submit">Spara namn</button>
+</form>
+
+<p>
+    Hej @Model! <br>
+    Välkommen till sidan om mig. Jag tänkte skriva en presentation om mig här, 
+    men sen tänkte jag att jag har gjort det så många gånger i våra små projekt. 
+    Så istället visar jag en fin bild =)
+</p>
+
+<p>SNART ÄR DET VÅR!!!!</p>
+
+@* Photo by <a href="https://unsplash.com/@lkverwoerd?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Lisette Verwoerd</a> on <a href="https://unsplash.com/photos/pink-tulip-field-0SMpMszU4bc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>*@
+
+<img src="~/images/tulips.jpg" alt="massor rosa tulper planterade i rader">

@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/css/main.css">
     <title>@ViewData["Title"]</title>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#">Startsida</a></li>
-                <li><a href="#">Att göra</a></li>
-                <li><a href="#">Om mig</a></li>
+                <li><a asp-controller="Home" asp-action="Index">Startsida</a></li>
+                <li><a asp-controller="Home" asp-action="ToDoList">Att göra</a></li>
+                <li><a asp-controller="Home" asp-action="About">Om mig</a></li>
             </ul>
         </nav>
     </header>
@@ -19,7 +23,9 @@
         @RenderBody()
     </main>
     <footer>
-        <p> 2025 Anne-Lii Hansen</p>
+        <p>
+            &copy; 2025 Anne-Lii Hansen          
+        </p>
     </footer>
     
 </body>

@@ -1,1 +1,16 @@
-<h2>Att göra:</h2>
+@model List<mvc_m1.Models.ToDoItem>
+
+@{
+    ViewData["Title"] = "Att göra";
+}
+
+<div class="container">
+    <h2>Att göra-lista:</h2>
+    <ul class="todoList">
+        @foreach (var item in Model)
+        {
+            <li>@item.Task</li>
+        
+        }
+    </ul>
+</div>
