@@ -5,18 +5,18 @@ namespace mvc_m1.Controllers;
 
 public class HomeController : Controller {
 
-    [HttpGet("/")] //Hanterar grundrouting
+    //Hanterar grundrouting
+    [HttpGet("/")] 
     public IActionResult Default()
     {
         return RedirectToAction("Index"); //Omdirigerar till /home
     }
 
 
-    [HttpGet("/home")] //Justerar routing
+    [HttpGet("/home")] //Justerar sökväg
     public IActionResult Index() 
     {
         ViewData["Message"] = "Välkommen till min MVC-applikation från Controllern med ViewData som skickar meddelande med en nyckel-värde-par struktur!"; //Skickar ViewData till vyn
-        ViewBag.Message = "Detta meddelande är också skickat från Controllern, fast med ViewBag =)";
         return View();
     }
 
@@ -31,6 +31,7 @@ public class HomeController : Controller {
             new ToDoItem { Id = 3, Task = "Gå till gymmet" }
         };
 
+        ViewBag.Message = "Detta meddelande är också skickat från Controllern, fast med ViewBag =)";
         return View(todoItems); //Skickar listan som modell
     }
 
